@@ -1,13 +1,13 @@
 .PHONY: all
-all: clpmdperf clean
+all: clpperfchk clean
 
-clpmdperf: clpmdperf.o 
-	cc -o clpmdperf clpmdperf.o
-clpmdperf.o: main.c
-	cc -c main.c -o clpmdperf.o
+clpperfchk: clpperfchk.o 
+	cc -o clpperfchk clpperfchk.o
+clpperfchk.o: main.c
+	cc -c main.c -o clpperfchk.o
 
 clpmdperf.o: mdperf.h
 
 .PHONY: clean
 clean:
-	rm -f clpmdperf.o 
+	rm -f clpperfchk.o 

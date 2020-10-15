@@ -56,7 +56,7 @@ sendalert
 	int threshold,
 	int times,
 	int interval,
-	int method,
+	char *method,
 	char *path
 )
 {
@@ -146,6 +146,7 @@ sendalert
 		{
 			if (send == 0)
 			{
+				/* TODO: check method and call clplogcmd */
 				send = 1;
 				printf("ERROR!!\n");
 			}
