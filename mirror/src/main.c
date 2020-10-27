@@ -20,9 +20,8 @@ int main
 	memset(label, 0, sizeof(label));
 	memset(path, 0, sizeof(label));
 	threshold = 0;
-	interval = 60;
 
-	if (argv[1], "alert")
+	if (!strcmp(argv[1], "alert"))
 	{
 		/* TODO: NULL check */
 		strcpy(label, argv[2]);
